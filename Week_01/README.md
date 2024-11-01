@@ -51,5 +51,5 @@
     
 - **Adriana Schultz Talk: Robotics for the Next Manufacturing Revolution**
   
-  - [Youtube]([https://www.3blue1brown.com/topics/calculus](https://www.youtube.com/watch?v=tYGcGGNZyGc))
+  - [Youtube](https://www.youtube.com/watch?v=tYGcGGNZyGc)
   
