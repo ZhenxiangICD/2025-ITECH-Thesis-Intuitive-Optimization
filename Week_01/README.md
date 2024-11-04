@@ -52,7 +52,7 @@
   
   - [Youtube](https://www.youtube.com/watch?v=tYGcGGNZyGc)
 
-- **[Course Slides](https://www.stat.cmu.edu/~ryantibs/convexopt-F18/)** 
+- **[Course](https://www.stat.cmu.edu/~ryantibs/convexopt-F18/) Slides** 
   - [Duality](https://www.stat.cmu.edu/~ryantibs/convexopt/lectures/dual-gen.pdf)
   - [KKT Conditions](https://www.stat.cmu.edu/~ryantibs/convexopt/lectures/kkt.pdf)
   - [Duality Uses](https://www.stat.cmu.edu/~ryantibs/convexopt/lectures/dual-corres.pdf)
