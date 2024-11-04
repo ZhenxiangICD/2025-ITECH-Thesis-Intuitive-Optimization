@@ -9,7 +9,6 @@
 - **Pareto Gamuts: Exploratory Design for Performance Criteria**
   - [Paper](https://paretogamuts.csail.mit.edu/Pareto_Gamuts_Paper_Final.pdf)
   - [Project](https://paretogamuts.csail.mit.edu/)
-  - [Code]()
 
 ## Prepare Before Reading
 
@@ -52,4 +51,8 @@
 - **Adriana Schultz Talk: Robotics for the Next Manufacturing Revolution**
   
   - [Youtube](https://www.youtube.com/watch?v=tYGcGGNZyGc)
-  
+
+- **[Course Slides](https://www.stat.cmu.edu/~ryantibs/convexopt-F18/)** 
+  - [Duality](https://www.stat.cmu.edu/~ryantibs/convexopt/lectures/dual-gen.pdf)
+  - [KKT Conditions](https://www.stat.cmu.edu/~ryantibs/convexopt/lectures/kkt.pdf)
+  - [Duality Uses](https://www.stat.cmu.edu/~ryantibs/convexopt/lectures/dual-corres.pdf)
