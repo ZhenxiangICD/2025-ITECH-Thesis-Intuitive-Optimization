@@ -9,7 +9,7 @@
 
 ## Prepare Before Reading 
 
-- Read Chapter 2 Of *The Matrix Cookbook* and grow familiar with taking derivatives of a Matrix expression
+- Read Chapter 2 of *The Matrix Cookbook* and grow familiar with taking derivatives of a Matrix expression
 - Watch video tutorial 1 and learn the basics of Newton's method and Gauss-Newton method
 - Complete the quiz
 - Video and textbook material: see the bottom
