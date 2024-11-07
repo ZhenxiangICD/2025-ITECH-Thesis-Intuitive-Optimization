@@ -9,7 +9,7 @@
 
 ## Prepare Before Reading 
 
-- Read Chapter 2 Of [The Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf) and grow familiar with taking derivatives of a Matrix expression
+- Read Chapter 2 Of **The Matrix Cookbook* and grow familiar with taking derivatives of a Matrix expression
 - Watch video tutorial 1 and learn the basics of Newton's method and Gauss-Newton method
 - Complete the quiz
 - Video and textbook material: see the bottom
@@ -32,7 +32,7 @@
   
 4. **Discussion**
    - What does the mesh data structure actually define from the variable-constraint relationship point of view?
-   - TBD
+   - How to understand the what each iterative linear equation is solving? What does the RHS (right-hand side, in the same dimension as variables) represent?
 
 ## Additional Resources
 
