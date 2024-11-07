@@ -31,7 +31,7 @@
    - Understand the purpose of *ϵI* in optimization (Tutorial 2 may help, starting at 25:00) 
   
 4. **Discussion**
-   - Read the code geometrylab/optimization/guidedprojection.py and geometrylab/optimization/guidedprojectionbase.py carefully and learn how to add iterative constraints to the model.
+   - Read the code structure [guidedprojection.py](https://github.com/WWmore/geometrylab/blob/main/optimization/guidedprojection.py) and [guidedprojectionbase.py](https://github.com/WWmore/geometrylab/blob/main/optimization/guidedprojectionbase.py) and learn how to add iterative constraints to the model.
    - What does the mesh data structure help to define the constraint-variable relationship?
 
 ## Additional Resources
@@ -53,6 +53,7 @@
 
   - [Gauss-Newton](https://ee263.stanford.edu/lectures/annotated/14_gauss_newton.pdf)
     
-- **Quiz** 
-  - [Matrix derivatives TBD](https://github.com/ZhenxiangICD/2025-ITECH-Thesis-Intuitive-Optimization)
-  - [Newton_Method exercise TBD](https://github.com/ZhenxiangICD/2025-ITECH-Thesis-Intuitive-Optimization)
+- **Short Quiz** 
+  1. What is a Hessian to a scalar function? Given a least-square function with a total of *n* variables and *k* terms, what is the dimension of its Hessian?
+  2. What is a positive semi-definite matrix and what does it imply to an optimization problem?
+  3. What is the difference between solving a overdetermined problem and an underdetermined problem with Newton's method?
