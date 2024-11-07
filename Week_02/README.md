@@ -4,7 +4,6 @@
 
 - **Form-finding with Polyhedral Meshes Made Simple**
   - [Paper](https://www.geometrie.tuwien.ac.at/geom/ig/publications/2014/formfinding22014/formfinding22014.pdf) 
-  - [Paper(Chinese)](https://www.huiwang.me/assets/pdf/hui-phd-thesis.pdf) Section 3.7
   - [Algorithm Documentation](https://www.huiwang.me/mkdocs-archgeo/optimization/)
   - [Code](https://github.com/WWmore/geometrylab)
 
@@ -52,4 +51,4 @@
 
 - **Quiz** 
   - [Matrix derivatives TBD](https://github.com/ZhenxiangICD/2025-ITECH-Thesis-Intuitive-Optimization)
-  - [Coding exercise TBD](https://github.com/ZhenxiangICD/2025-ITECH-Thesis-Intuitive-Optimization)
+  - [Newton_Method exercise TBD](https://github.com/ZhenxiangICD/2025-ITECH-Thesis-Intuitive-Optimization)
