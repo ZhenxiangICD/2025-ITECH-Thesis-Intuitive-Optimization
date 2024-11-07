@@ -12,7 +12,6 @@
 - Read Chapter 2 of *The Matrix Cookbook* and grow familiar with taking derivatives of a Matrix expression
 - Watch video tutorial 1 and learn the basics of Newton's method and Gauss-Newton method
 - Complete the quiz
-- Video and textbook material: see the bottom
 
 ## Questions
 
@@ -23,7 +22,7 @@
    - What is the interactive modeling procedure with handle-based deformation?
 
 2. **Constraint Terms**
-   - Pick a specific constraint (e.g., planarity) and write down its form of Hx = r at iteration step n, make sure to match the dimensions between matrix and vector
+   - Pick a specific constraint (e.g., planarity) and write down its form of Hx = r at iteration step n. Make sure to match the dimensions between the matrix and vector.
    - How are inequality constraints modeled?
      
 3. **Fairness and Regularization Terms**
@@ -31,8 +30,8 @@
    - Understand the purpose of *ϵI* in optimization (Tutorial 2 may help, starting at 25:00) 
   
 4. **Discussion**
-   - Read the code structure [guidedprojection.py](https://github.com/WWmore/geometrylab/blob/main/optimization/guidedprojection.py) and [guidedprojectionbase.py](https://github.com/WWmore/geometrylab/blob/main/optimization/guidedprojectionbase.py) and learn how to add iterative constraints to the model.
-   - What does the mesh data structure help to define the constraint-variable relationship?
+   - Read the code structure of [guidedprojection.py](https://github.com/WWmore/geometrylab/blob/main/optimization/guidedprojection.py) and [guidedprojectionbase.py](https://github.com/WWmore/geometrylab/blob/main/optimization/guidedprojectionbase.py) and learn how to incrementally add constraints to the model.
+   - How does the mesh data structure help to define the constraint-variable relationship?
 
 ## Additional Resources
 
@@ -56,4 +55,4 @@
 - **Short Quiz** 
   1. What is a Hessian to a scalar function? Given a least-square function with a total of *n* variables and *k* terms, what is the dimension of its Hessian?
   2. What is a positive semi-definite matrix and what does it imply to an optimization problem?
-  3. What is the difference between solving a overdetermined problem and an underdetermined problem with Newton's method?
+  3. What is the difference between solving an overdetermined problem and an underdetermined problem with Newton's method?
