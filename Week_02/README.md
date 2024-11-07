@@ -9,7 +9,7 @@
 
 ## Prepare Before Reading 
 
-- Read Chapter 2 Of **The Matrix Cookbook* and grow familiar with taking derivatives of a Matrix expression
+- Read Chapter 2 Of *The Matrix Cookbook* and grow familiar with taking derivatives of a Matrix expression
 - Watch video tutorial 1 and learn the basics of Newton's method and Gauss-Newton method
 - Complete the quiz
 - Video and textbook material: see the bottom
@@ -17,11 +17,18 @@
 ## Questions
 
 1. **Detail Implementation**
-   - TBD
-   - TBD
+   - Derive the process from
+\[
+\varphi_i(x) = \frac{1}{2} X^T A_i X + b_i^T X + c_i = 0, \quad i = 1, \cdots, N,
+\] to
+\[ 
+\H x = r
+\]
+   - What modeling tricks does the author use to make the constraints at most quadratic?
+   - What is the interactive modeling procedure with handle-based deformation?
 
 2. **Constraint Terms**
-   - TBD
+   - Pick a specific constraint (discrete orthogonal or planarity) and write it down in the form of 
    - TBD
    - TBD
      
@@ -31,8 +38,9 @@
    - TBD
   
 4. **Discussion**
-   - What does the mesh data structure actually define from the variable-constraint relationship point of view?
-   - How to understand the what each iterative linear equation is solving? What does the RHS (right-hand side, in the same dimension as variables) represent?
+   - What does the mesh data structure help to define the constraint-variable relationship?
+   - What modeling tricks does the author use to make the constraints at most quadratic?
+   - Read the code geometrylab/optimization/guidedprojection.py and geometrylab/optimization/guidedprojectionbase.py carefully and learn how to add iterative constraints to the model.
 
 ## Additional Resources
 
