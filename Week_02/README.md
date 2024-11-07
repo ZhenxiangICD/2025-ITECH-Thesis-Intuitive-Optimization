@@ -1,4 +1,4 @@
-# Week 2: Matrix Derivatives, Second-Order Methods (Newton-Raphson, Gauss-Newton)
+# Week 2: Matrix Calculus, Second-Order Methods (Newton-Raphson, Gauss-Newton)
 
 ## Reading Assignments
 
@@ -16,7 +16,7 @@
 
 ## Questions
 
-1. **Overall Understanding**
+1. **Detail Implementation**
    - TBD
    - TBD
 
@@ -25,18 +25,18 @@
    - TBD
    - TBD
      
-3. **Guided Projection Terms**
+3. **Fairness and Regularization Terms**
    - TBD
    - TBD
    - TBD
   
 4. **Discussion**
-   - TBD
+   - What does the mesh data structure actually define from the variable-constraint relationship point of view?
    - TBD
 
 ## Additional Resources
 
-- *Matrix Calculus**
+- **Matrix Calculus**
   
   - [The Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf)
   - [online tool](https://www.matrixcalculus.org/)
@@ -45,10 +45,14 @@
 
   - [Youtube](https://www.youtube.com/watch?v=7Z1p-cj36_U&ab_channel=KevinTracy)
     
-- **Video Tutorial 2 (Levenberg-Marquadt Method, OPTIONAL)**
+- **Video Tutorial 2 (Levenberg-Marquadt Method (regularized Gauss-Newton), OPTIONAL)**
   
   - [Youtube](https://www.youtube.com/watch?v=2ToL9zUR8ZI&ab_channel=EngineeringEducatorAcademy)
 
+- **Notes**
+
+  - [Gauss-Newton](https://ee263.stanford.edu/lectures/annotated/14_gauss_newton.pdf)
+    
 - **Quiz** 
   - [Matrix derivatives TBD](https://github.com/ZhenxiangICD/2025-ITECH-Thesis-Intuitive-Optimization)
   - [Newton_Method exercise TBD](https://github.com/ZhenxiangICD/2025-ITECH-Thesis-Intuitive-Optimization)
