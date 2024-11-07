@@ -16,31 +16,23 @@
 
 ## Questions
 
-1. **Detail Implementation**
-   - Derive the process from
-\[
-\varphi_i(x) = \frac{1}{2} X^T A_i X + b_i^T X + c_i = 0, \quad i = 1, \cdots, N,
-\] to
-\[ 
-\H x = r
-\]
+1. **Implementation Details**
+   - Derive and understand the process of linearizing a quadratic constraint. 
+   - Derive and understand the process from minimizing a sum-of-square problem to solving a linear equation (hint: taking the Gradient and setting it to zero).
    - What modeling tricks does the author use to make the constraints at most quadratic?
    - What is the interactive modeling procedure with handle-based deformation?
 
 2. **Constraint Terms**
-   - Pick a specific constraint (discrete orthogonal or planarity) and write it down in the form of 
-   - TBD
-   - TBD
+   - Pick a specific constraint (e.g., planarity) and write down its form of Hx = r at iteration step n, make sure to match the dimensions between matrix and vector
+   - How are inequality constraints modeled?
      
 3. **Fairness and Regularization Terms**
-   - TBD
-   - TBD
-   - TBD
+   - Why is the fairness term necessary for this optimization method? How to design this term?
+   - Understand the purpose of *ϵI* in optimization (Tutorial 2 may help, starting at 25:00) 
   
 4. **Discussion**
-   - What does the mesh data structure help to define the constraint-variable relationship?
-   - What modeling tricks does the author use to make the constraints at most quadratic?
    - Read the code geometrylab/optimization/guidedprojection.py and geometrylab/optimization/guidedprojectionbase.py carefully and learn how to add iterative constraints to the model.
+   - What does the mesh data structure help to define the constraint-variable relationship?
 
 ## Additional Resources
 
@@ -53,7 +45,7 @@
 
   - [Youtube](https://www.youtube.com/watch?v=7Z1p-cj36_U&ab_channel=KevinTracy)
     
-- **Video Tutorial 2 (Levenberg-Marquadt Method (regularized Gauss-Newton), OPTIONAL)**
+- **Video Tutorial 2 (Levenberg-Marquardt Method)**
   
   - [Youtube](https://www.youtube.com/watch?v=2ToL9zUR8ZI&ab_channel=EngineeringEducatorAcademy)
 
