@@ -48,8 +48,10 @@
   
   - [Youtube](https://www.youtube.com/watch?v=2ToL9zUR8ZI&ab_channel=EngineeringEducatorAcademy)
 
-- **Notes**
+- **Notes and Courses**
 
+  - [Quadratic Approximation](https://en.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/quadratic-approximations/a/quadratic-approximation)
+  - [The Hessian](https://en.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/quadratic-approximations/a/the-hessian)
   - [Gauss-Newton](https://ee263.stanford.edu/lectures/annotated/14_gauss_newton.pdf)
     
 - **Short Quiz** 
