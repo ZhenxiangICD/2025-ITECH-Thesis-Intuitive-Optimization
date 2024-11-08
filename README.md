@@ -6,7 +6,7 @@ Mathematics is the foundation of modern computer graphics and computational desi
 ## Wk1-3 : optimization and calculus basics in geometry context
 - Week1 (11.4): Taylor Series, First-Order Derivatives, KKT conditions - Exploratory and Evaluation of Optimization Landscape
 - Week2 (11.11): Second-Order Derivatives, Matrix Calculus, Gauss-Newton Method - Geometry Optimization 1
-- Week3 (11.18): System Linearization, Common Optimization / Modeling Tricks - Geometry Optimization 2 
+- Week3 (11.18): Non-trivial optimization, Matrix Factorization, Augmented Lagrangian - Geometry Optimization 2 
 
 ## Wk4-6 : differentiable simulation
 - Week4 (11.25): Explicit and Implicit Integration for Simulation - Mass-Spring System
