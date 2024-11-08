@@ -54,6 +54,6 @@
     
 - **Short Quiz** 
   1. What is a Hessian to a scalar function? what is the dimension of its Hessian?
-  2. Try to compute the Hessian of a simple sum-of-square function like *(𝑥[𝑖−1]−2⋅𝑥[𝑖]+𝑥[𝑖+1])^2 for each i from 1 to len(𝑥)−1* and understand its sparse nature in such problems
+  2. Try to compute the Hessian of a simple sum-of-square function like *(𝑥 [ 𝑖 − 1 ] − 2 ⋅ 𝑥 [ 𝑖 ] + 𝑥 [ 𝑖 + 1 ]) ^ 2 for each i from 1 to len(𝑥) − 1* and understand its sparse nature in such problems
   3. What is a positive semi-definite matrix and what does it imply to an optimization problem?
   4. What is the difference between solving an overdetermined problem and an underdetermined problem with Newton's method?
