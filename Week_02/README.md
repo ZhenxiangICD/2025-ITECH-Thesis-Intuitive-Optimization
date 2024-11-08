@@ -53,6 +53,7 @@
   - [Gauss-Newton](https://ee263.stanford.edu/lectures/annotated/14_gauss_newton.pdf)
     
 - **Short Quiz** 
-  1. What is a Hessian to a scalar function? Given a least-square function with a total of *n* variables and *k* terms, what is the dimension of its Hessian?
-  2. What is a positive semi-definite matrix and what does it imply to an optimization problem?
-  3. What is the difference between solving an overdetermined problem and an underdetermined problem with Newton's method?
+  1. What is a Hessian to a scalar function? what is the dimension of its Hessian?
+  2. Try to compute the Hessian of the following function *f(x) = sum( ([x[i] - 2 * x[i-1] + x[i+1]) ^ 2 )* and understand its sparse nature in sum-of-square problems
+  3. What is a positive semi-definite matrix and what does it imply to an optimization problem?
+  4. What is the difference between solving an overdetermined problem and an underdetermined problem with Newton's method?
