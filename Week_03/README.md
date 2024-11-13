@@ -1,4 +1,4 @@
-# Week 3/4: Non-linear problems, Geometry Intrinsics
+# Week 3/4: Non-linear problems and methods / Geometry Intrinsics
 
 ## Introduction
 
@@ -31,9 +31,9 @@ This session is split into two parts, one continues from the previous discussion
 
 - Watch ONE of the video tutorials on the following algorithms and learn its key concepts. 
 
-  a. ) Augmented Lagrangian Method (useful in updating multipliers and managing feasibilities)
+  a. ) Augmented Lagrangian Method (useful in managing feasibilities)
 
-  b. ) Coordinate Descent (useful in making problems simpler!)
+  b. ) Coordinate Descent (useful in making problems simpler)
 
   The paper you read depends on the algorithm you study ( of course you can do both! )
 
@@ -68,13 +68,19 @@ This session is split into two parts, one continues from the previous discussion
     
 - **Video Tutorial 1 (Augmented Lagrangian Method)**
 
+Learn the concept of nesting an optimization problem and update penalty weights iteratively for feasibility conditions.
+
   - [Youtube](https://www.youtube.com/watch?v=jyq7_GoT0H4&t=2s&ab_channel=KevinTracy)
 
 - **Video Tutorial 2 (Coordinate Descent)**
 
+Learn the concept of separating different variables and optimize them separately.
+
   - [Youtube](https://www.youtube.com/watch?v=bFAzf36qqT0&ab_channel=RyanT) 
 
 - **Video Tutorial 3 (Majorization Minimization)**
+
+ Learn to decompose an objective into convex and concave parts and create a surrogate majorizer. After watching 1-2 examples you can jump directly to the paper.
   
   - [Youtube](https://www.youtube.com/watch?v=S_QSbmBupLc&ab_channel=ComputationalGenomicsSummerInstituteCGSI)
   - [Bilibili](https://www.bilibili.com/video/BV1Zu4y1x7df?spm_id_from=333.788.videopod.sections&vd_source=2685748f21cc03829a6868afaba6584e)
