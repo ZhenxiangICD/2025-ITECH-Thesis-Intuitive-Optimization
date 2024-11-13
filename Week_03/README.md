@@ -1,4 +1,4 @@
-# Week 3/4: Non-linear problems and methods / Geometry Intrinsics
+# Week 3/4: Non-linear problems / Geometry Intrinsics
 
 ## Introduction
 
