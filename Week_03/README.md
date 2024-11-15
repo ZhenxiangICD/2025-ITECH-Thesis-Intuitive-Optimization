@@ -72,7 +72,8 @@ This session builds on our previous discussion on optimization by shifting focus
 
     *Learn the concept of separating variables and alternatingly optimizing them.*
 
-  - [Youtube](https://www.youtube.com/watch?v=5im_ZSOZdxI) 
+  - [Youtube1 / least-square basic](https://www.youtube.com/watch?v=8mAZYv5wIcE)
+  - [Youtube2 / recommendation system](https://www.youtube.com/watch?v=5im_ZSOZdxI)
 
 - **Video Tutorial 3 (Majorization Minimization)**
 
