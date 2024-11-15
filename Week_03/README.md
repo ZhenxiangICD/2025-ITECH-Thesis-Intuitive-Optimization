@@ -41,20 +41,20 @@ This session builds on our previous discussion on optimization by shifting focus
    - *Paper 2* :  Understand the concept of approximating an objective function with convex-concave decomposition and how to derive a majorizer.
 
 2. **Details To Skip**
-   - For paper 2, you can skip the energy objective in Section 4 if you find the variable definitions challenging—try to understand just ONE of the objectives.
    - For paper 1B, you can ignore the mathematical details in Section 6, as we will discuss them further in the next reading.
+   - For paper 2, warning that there are a lot of abstract formula and derivations! If you are already exhausted after the first reading, please just watch the video and focus on the details and derivation from 7:00 to 10:00. 
     
 ## After Reading
 
 1. **Method**
    - For paper 1A/1B, discuss the methods you learned from the tutorial and how it is applied in the paper. For Augmented Lagrangian, how does it balance hard and soft constraint satisfaction? For Alternating Least-Square, what is the benefit in using a local/local scheme compared to a local/global scheme?
-   - For paper 2, explain how majorizer and Hessian is derived.
+   - For paper 2, explain how to use the composite nature of geometric objective to build majorizer and Hessian.
      
 2. **Interactive Optimization**
-   - For paper 1A/1B, discuss what application scenario the real-time optimization allow designers to make adjustment to their design. How do these methods enable a flexible design workflow in interactive applications? What is the balance between optimization and user control?
+   - For paper 1A/1B, discuss what application scenario the fast optimization allow designers to make adjustment to their design. How do these methods enable a flexible design workflow in interactive applications? What is the balance between optimization and user control?
   
 3. **Discussion**
-   - Discuss how mapping / parameterization techniques may be used in your project.
+   - Discuss how the Jacobian (deformation gradient) captures the intrinsic of a shape change of a triangle. 
 
 ## Additional Resources
 
