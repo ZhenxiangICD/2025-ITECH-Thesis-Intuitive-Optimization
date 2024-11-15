@@ -54,7 +54,7 @@ This session builds on our previous discussion on optimization by shifting focus
    - For paper 1A/1B, discuss what application scenario the fast optimization allow designers to make adjustment to their design. How do these methods enable a flexible design workflow in interactive applications? What is the balance between optimization and user control?
   
 3. **Discussion**
-   - Discuss how the Jacobian (deformation gradient) captures the intrinsic of a shape change of a triangle. 
+   - Discuss how the Jacobian (deformation gradient) captures the intrinsic of the shape change of a triangle. 
 
 ## Additional Resources
 
