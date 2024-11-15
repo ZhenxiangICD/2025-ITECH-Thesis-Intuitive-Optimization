@@ -33,7 +33,7 @@ This session builds on our previous discussion on optimization by shifting focus
 
   Choose paper 1A or 1B based on the algorithm you study (coordinate with peers to choose different ones when possible).
 
-- Watch video tutorial 3 and learn the concept of majorization minimization (MM). This will cover the basic principles of creating a surrogate for a complex function. Then, briefly review the Mappings slides — focus on understanding the role of the Jacobian in a mapping and how it can be decomposed, without worrying about all technical details.
+- Watch video tutorial 3 and learn the concept of majorization minimization (MM). This will cover the basic principles of creating a surrogate for a complex function. Then, briefly review the *Mappings* slides — focus on understanding the role of the Jacobian in a mapping and how it can be decomposed, without worrying about all technical details.
 
 ## While Reading
 1. **Overall Aims**
