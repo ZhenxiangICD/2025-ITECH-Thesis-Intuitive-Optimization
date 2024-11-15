@@ -8,10 +8,13 @@ Mathematics is the foundation of modern computer graphics and computational desi
 - Week2 (11.11): Second-Order Derivatives, Matrix Calculus, Gauss-Newton Method - Geometry Optimization 1
 - Week3 (11.18): Non-trivial optimization, Matrix Factorization, Augmented Lagrangian - Geometry Optimization 2 
 
-## Wk4-6 : differentiable simulation
-- Week4 (11.25): Explicit and Implicit Integration for Simulation - Mass-Spring System
-- Week5 (12.2): Stress and Strain Function, Finite-Element Analysis - Solid Mechanics
-- Week6-7 (12.9/16): Implicit Function Theorem, Sensitivity Analysis, Adjoint Method - Simulation Optimization 
+## Wk4 : shape analysis
+- Week4 (11.25) : Shape Operator, Lapacian, Spectral Analysis
+  
+## Wk5-7 : differentiable simulation
+- Week5 (12.2): Explicit and Implicit Integration for Simulation - Mass-Spring System
+- Week6 (12.9): Stress and Strain Function, Finite-Element Analysis - Solid Mechanics
+- Week7 (12.16): Implicit Function Theorem, Sensitivity Analysis, Adjoint Method - Simulation Optimization 
 
 ## Wk7-9 : computational design (Applications of previous techniques, reading during Christmas break)
 - Forward design
