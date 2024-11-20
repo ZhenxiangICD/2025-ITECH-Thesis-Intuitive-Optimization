@@ -20,7 +20,7 @@ Writing gradient of *E* w.r.t both *p* and *x* as a function *g*, we achieve:
 
 at the minimization point. Then comes the rescue of the implicit function theorem, which you will see in more detail in the tutorial. But essentially it tells you that you can have the following equation
 
-*dx(p) / dp = - inv(dg/dx) * dg/dp* (Inverse of the Jacobian *dgdx* multiply the partial derivative of *g* w.r.t. *p*)
+*dx(p) / dp = - inv(dg/dx) * dg/dp* (Inverse of the Jacobian *dg/dx* multiply the partial derivative of *g* w.r.t. *p*)
 
 In a FEM system, the Jacobian *dg/dx* is essentially the stiffness matrix K! And it's usually easy to express analytically given any simulation problem since most of them are just solving the problem of Kx = u at every step. 
 However, computing its inverse might still be expensive, but we can use the adjoint method to solve it with only its transpose. We don't go deep into this for this week, but it will be addressed in the future.
