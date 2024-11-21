@@ -2,13 +2,13 @@
 ## Introduction
 
 This session starts a new discussion on inverse design, that is, to discuss a set of problems that optimizes an equilibrium state of some model of optimization/simulation. This kind of optimization is also known as nested/bi-level optimization.
-The key to such a problem lies in computing the derivative of simulation, a.k.a. sensitivity matrix :
+The key to such a problem lies in computing the derivative of simulation, a.k.a. sensitivity analysis:
 
 *dx(p) / dp*, 
 
 where *x* is the simulation/optimization outcome from parameter *p*.
 
-Let's have 
+Let's assume 
 
 *x(p) = argmin E(x_hat, p)*
 
@@ -22,12 +22,16 @@ at the minimization point. Then comes the rescue of the implicit function theore
 
 *dx(p) / dp = - inv(dg/dx) * dg/dp* (Inverse of the Jacobian *dg/dx* multiply the partial derivative of *g* w.r.t. *p*)
 
-In a FEM system, the Jacobian *dg/dx* is essentially the stiffness matrix K! And it's usually easy to express analytically given any simulation problem since most of them are just solving the problem of Kx = u at every step. 
-However, computing its inverse might still be expensive, but we can use the adjoint method to solve it with only its transpose. We don't go deep into this for this week, but it will be addressed in the future.
+In a FEM system, the Jacobian *dg/dx* is essentially the stiffness matrix K! And it's usually easy to express analytically given any simulation problem since most of them are just solving the problem of KΔx = u at every step Δx(nature of PDE). 
+Most simulation tools' APIs provide this matrix, or at least easy access to assemble it. Computing its inverse might still be expensive, but we can use the adjoint method to solve it with only its transpose. We don't go deep into this this week, but it will be addressed in the future.
+
+*dg/dp* depends more on what parameters you choose. Deriving it by hand is certainly possible and shouldn't be too complex, but automatic differentiation is usually more helpful.
 
 In a neural network, however, the sensitivity matrix *dx(p) / dp* can be easily computed via backpropagation. Then you can use the chain rule to optimize a problem involving the prediction from the model.
 
-In the paper we will read this week, the author also uses a neural network to predict the material behavior... There you can see how he COMBINES the knowledge from FEM and NN to achieve inverse design of a complex system!
+In the core paper we will read this week, the author also uses a neural network to predict the material behavior... There you can see how he COMBINES the knowledge from FEM and NN to achieve the inverse design of a complex system!
+
+I further provide two more optional papers, like last time you can distribute one to each other. They share a very similar research scope, that is to implicitly describe the intrinsic relationship between different points (geodesic distance and voronoi diagram) given a domain in a differentiable manner. 
 
 ## Reading Assignments
 
@@ -36,81 +40,60 @@ In the paper we will read this week, the author also uses a neural network to pr
   - [Video](https://www.youtube.com/watch?v=NHLYxoZ2O_s&ab_channel=ComputationalRoboticsLab)
   - [Code](https://github.com/liyuesolo/NeuralMetamaterialNetwork)
  
-- **Bonus A- Differentiable Voronoi Diagrams for Simulation of Cell-Based Mechanical Systems**
-  - [Paper](https://roipo.github.io/publication/poranne-2013-interactive/planarization.pdf)
-  - [Video](https://www.youtube.com/watch?v=wbBJ4v9VyR0&ab_channel=ComputationalRoboticsLab)
+- **Option A- Differentiable Voronoi Diagrams for Simulation of Cell-Based Mechanical Systems**
+  - [Paper](https://arxiv.org/pdf/2404.18629)
+  - [Short Video](https://www.youtube.com/watch?v=wbBJ4v9VyR0&ab_channel=ComputationalRoboticsLab)
   - [Code](https://github.com/lnumerow-ethz/VoronoiCellSim)
  
-- **Bonus B- Differentiable Geodesic Distance for Intrinsic Minimization on Triangle Meshes**
+- **Option B- Differentiable Geodesic Distance for Intrinsic Minimization on Triangle Meshes**
   - [Paper](https://arxiv.org/pdf/2404.18610)
-  - [Video](https://www.youtube.com/watch?v=R0TByqlbsXQ&ab_channel=ComputationalRoboticsLab)
+  - [Short Video](https://www.youtube.com/watch?v=R0TByqlbsXQ&ab_channel=ComputationalRoboticsLab)
   - [Code](https://github.com/liyuesolo/DifferentiableGeodesics)
     
 ## Before Reading 
 
-- Go through slides of *Introduction to Optimization for Simulation* and
+- Watch the video tutorial on *Implicit Differentiation* and understand at which condition the derivative of an implicit function can be computed in the abovementioned manner.
 
-  1.) Review the general methods of solving a minimization problem
+- Read slides of *sensitivity analysis* and review the method of taking derivatives of a simulation process. Then watch the video tutorial on *Adjoint Sensitivities*
 
-  2.) Familiarize yourself with three major challenges in geometry optimization and take note of some common methods (no need to dive deep now—you can refer back when encountering similar challenges).
+- Quickly take a glance through the slides of *FEM lightweight intro* and have the basic concepts of strains and energy density. Go back to them when you have difficulty reading the paper.
 
-- Watch ONE of the video tutorials on the following algorithms and learn its key concepts. 
-
-  a. ) Augmented Lagrangian Method (useful in managing feasibilities)
-
-  b. ) Alternating Least-Square (useful in parallel and distributed computing)
-
-  Choose paper 1A or 1B based on the algorithm you study (coordinate with peers to choose different ones when possible).
-
-- Watch video tutorial 3 and learn the concept of majorization minimization (MM). This will cover the basic principles of creating a surrogate for a complex function. Then, briefly review the *Mappings* slides — focus on understanding the role of the Jacobian in a mapping and how it can be decomposed, without worrying about all technical details.
 
 ## While Reading
 1. **Overall Aims**
-   - *Paper 1A / 1B* : Compare the methods used in these papers to the Gauss-Newton method we studied last week and examine why the selected methods are applied, especially in relation to constraint definition.
-   - *Paper 2* :  Understand the concept of approximating an objective function with convex-concave decomposition and how to derive a majorizer.
+   - *Core*: Understand how the author trains the model with simulation data (map in and map out) and how the model is used together with simulation knowledge for inverse design. The optimization part is crucial as it reveals the key to solving a nested problem with constraints.
+   - *Option*: Try to grab the concept of describing a system implicitly. Understand the smoothing process they take during topological transitions.
 
 2. **Details To Skip**
-   - For paper 1B, you can ignore the mathematical details in Section 6, as we will discuss them further in the next reading.
-   - For paper 2, warning that there are a lot of abstract formula and derivations! If you are already exhausted after the first reading, please just watch the video and focus on the details and derivation from 7:00 to 10:00. 
+   - For the core paper, check on the FEM tutorial back and forth for strain definitions. Pay attention to how the degree of freedom gets simplified with a full FEM system.
+   - For the option paper, skip most of the equations on the application part of the system (i.e. deformation and dynamics) and focus more on the system's design.
     
 ## After Reading
 
-1. **Method**
-   - For paper 1A/1B, discuss the methods you learned from the tutorial and how it is applied in the paper. For Augmented Lagrangian, how does it balance hard and soft constraint satisfaction? For Alternating Least-Square, what is the benefit in using a local/local scheme compared to a local/global scheme?
-   - For paper 2, explain how to use the composite nature of geometric objective to build majorizer and Hessian.
+1. **Overall Method**
+   - For the core paper, what are the advantages of using a neural network instead of directly optimizing over a simulation? What are the inputs used to train the network and why are they used?
+   - For the option papers, explain how the system is differentiable.
      
-2. **Interactive Optimization**
-   - For paper 1A/1B, discuss what application scenario the fast optimization allow designers to make adjustment to their design. How do these methods enable a flexible design workflow in interactive applications? What is the balance between optimization and user control?
+2. **Optimization**
+   - For the core paper, why is the inner optimization necessary? How is it solved?
+   - Optimization part in the option papers is not required at this time...
   
 3. **Discussion**
-   - Discuss how the Jacobian (deformation gradient) captures the intrinsic of the shape change of a triangle. 
+   - Reflect on the different strategy of handing couplings in a system. (Boundary Coupling in the voronoi paper, hosting object - elastic curve coupling in the geodesic paper, and the strain condition for the core paper)
 
 ## Additional Resources
 
+- **Tutorials**
+  - [Implicit Differentiation](https://www.3blue1brown.com/lessons/implicit-differentiation)
+  - [Adjoint Sensitivities](https://www.youtube.com/watch?v=MlHKW7Ja-qs&ab_channel=MachineLearning%26Simulation)
+    
 - **Course and Notes**
-  - [Sensitivity Analysis](https://crl.ethz.ch/teaching/computational-fab-19/tutorials/tutorial_a3.pdf)
-  - 
+  - [Sensitivity Analysis](https://crl.ethz.ch/teaching/computational-fab-19/slides/sensitivityAnalysis.pdf)
   - [FEM lightweight intro](https://www.cs.cmu.edu/~scoros/cs15869-s15/lectures/08-FEM.pdf)
 
 - **Code Repository**
   - [Wukong / collection of many classic differentiable simulation problems)](https://github.com/liyuesolo/Wukong2024/tree/master)
+ 
+- **Lecture (only watch when you have spare time...)**
+  - [Differentiable Simulation](https://www.youtube.com/watch?v=atCFu-vwyVw&t=1261s&ab_channel=%E6%9C%B1%E5%AD%90%E5%8E%9A)  
 
-- **Video Tutorial 1 (Augmented Lagrangian Method / ALM)**
-
-    *Learn the concept of nesting an optimization problem and updating penalty weights iteratively to satisfy feasibility conditions.*
-
-  - [Youtube](https://www.youtube.com/watch?v=jyq7_GoT0H4&t=2s&ab_channel=KevinTracy)
-
-- **Video Tutorial 2 (Alternating Least-Square / ALS)**
-
-    *Learn the concept of separating variables and alternatingly optimizing them.*
-
-  - [Youtube1 / least-square basic](https://www.youtube.com/watch?v=8mAZYv5wIcE)
-  - [Youtube2 / recommendation system](https://www.youtube.com/watch?v=5im_ZSOZdxI)
-
-- **Video Tutorial 3 (Majorization Minimization)**
-
-     *Learn to create a surrogate objective based on the concept of majorization. Watch the first 10 minutes for the basic concept and go through 1-2 examples to practice.*
-  
-  - [Youtube](https://www.youtube.com/watch?v=S_QSbmBupLc&ab_channel=ComputationalGenomicsSummerInstituteCGSI)
-  - [Bilibili](https://www.bilibili.com/video/BV1Zu4y1x7df?spm_id_from=333.788.videopod.sections&vd_source=2685748f21cc03829a6868afaba6584e)
