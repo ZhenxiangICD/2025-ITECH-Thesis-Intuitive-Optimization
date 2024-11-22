@@ -68,7 +68,7 @@ We also provide two optional papers for you to split reading, which explore diff
 ## While Reading
 
 1. **Overall Aims**:
-   - **Core paper**: Understand how the neural network is trained using simulation data and why the formulate the input-output pair. How is the model integrated with simulation knowledge for inverse design. Focus on how the optimization process solves nested problems with constraints.
+   - **Core paper**: Understand how the neural network model integrated with simulation knowledge for inverse design. Focus on how the optimization process solves nested problems and where the derivatives come from.
    - **Option papers**: Learn the concept of implicitly describing a system with a governing condition. 
 
 2. **Details to Skip**:
