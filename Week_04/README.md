@@ -26,11 +26,32 @@ Most simulation tools' APIs provide this matrix, or at least easy access to asse
 
 *dg/dp* depends more on what parameters you choose. Deriving it by hand is certainly possible and shouldn't be too complex, but automatic differentiation is usually more helpful.
 
-In a neural network, however, the sensitivity matrix *dx(p) / dp* can be easily computed via backpropagation. Then you can use the chain rule to optimize a problem involving the prediction from the model.
+In a neural network, however, the sensitivity matrix *dx(p) / dp* can be easily computed via backpropagation. 
 
-In the core paper we will read this week, the author also uses a neural network to predict the material behavior... There you can see how he COMBINES the knowledge from FEM and NN to achieve the inverse design of a complex system!
+In this week's core paper, you’ll see how neural networks are integrated with FEM knowledge to address inverse design challenges.
 
-I further provide two more optional papers, like last time you can distribute the tasks. They share a very similar research scope, that is to implicitly describe the intrinsic relationship between different points (geodesic distance and voronoi diagram) in a differentiable manner. 
+We also provide two optional papers for you to split reading, which explore differentiable descriptions of intrinsic relationships between points(geodesic distance and Voronoi diagrams), emphasizing implicit modeling.
+
+---
+
+## Reading Assignments
+
+- **Core**: *Neural Metamaterial Networks for Nonlinear Material Design*
+  - [Paper](https://arxiv.org/pdf/2309.10600)
+  - [Video](https://www.youtube.com/watch?v=NHLYxoZ2O_s&ab_channel=ComputationalRoboticsLab)
+  - [Code](https://github.com/liyuesolo/NeuralMetamaterialNetwork)
+ 
+- **Option A**: *Differentiable Voronoi Diagrams for Simulation of Cell-Based Mechanical Systems*
+  - [Paper](https://arxiv.org/pdf/2404.18629)
+  - [Short Video](https://www.youtube.com/watch?v=wbBJ4v9VyR0&ab_channel=ComputationalRoboticsLab)
+  - [Code](https://github.com/lnumerow-ethz/VoronoiCellSim)
+ 
+- **Option B**: *Differentiable Geodesic Distance for Intrinsic Minimization on Triangle Meshes*
+  - [Paper](https://arxiv.org/pdf/2404.18610)
+  - [Short Video](https://www.youtube.com/watch?v=R0TByqlbsXQ&ab_channel=ComputationalRoboticsLab)
+  - [Code](https://github.com/liyuesolo/DifferentiableGeodesics)
+
+---
 
 ## Before Reading
 
