@@ -11,7 +11,7 @@ Let's assume:
 
 *x(p) = argmin E(x_hat, p)*
 
-Here, *x* reflects the configuration at which a function *E* (e.g. deformation energy) is minimized, depending on the parameter set *p* (e.g., external forces, material properties) and the current configuration *x_hat* (e.g., vertex positions).
+Here, *x* reflects the configuration at which a function *E* (e.g. deformation energy) is minimized, depending on the parameter set *p* (e.g., external forces, material properties) and the current configuration *x_hat* (e.g., current vertex positions).
 
 Taking the gradient of of *E* w.r.t both *p* and *x* as a function *g*, we define: 
 
