@@ -22,15 +22,15 @@ at the minimization point. Using the **implicit function theorem**, we derive th
 *dx(p) / dp = - inv(dg/dx) * dg/dp* (Inverse of the Jacobian *dg/dx* multiply the partial derivative of *g* w.r.t. *p*)
 
 In a FEM system, the Jacobian *dg/dx* is essentially the stiffness matrix K! And it's usually easy to express analytically given any simulation problem since most of them are just solving the problem of KΔx = u at every step Δx(nature of PDE). 
-Most simulation tools' APIs provide this matrix, or at least easy access to assemble it. Computing its inverse might still be expensive, but we can use the adjoint method to solve it with only its transpose. We don't go deep into this this week, but it will be addressed in the future.
+Most simulation tools' APIs provide this matrix, or at least easy access to assemble it. Computing its inverse might still be expensive, but we can use the adjoint method to solve it with only its transpose.
 
-*dg/dp* depends more on what parameters you choose. Deriving it by hand is certainly possible and shouldn't be too complex, but automatic differentiation is usually more helpful.
+*dg/dp* depends more on what parameters you choose. Deriving it by hand is certainly possible and shouldn't be too complex, but automatic differentiation is usually very helpful.
 
 In a neural network, however, the sensitivity matrix *dx(p) / dp* can be easily computed via backpropagation. 
 
 In this week's core paper, you’ll see how neural networks are integrated with FEM knowledge to address inverse design challenges.
 
-We also provide two optional papers for you to split reading, which explore differentiable descriptions of intrinsic relationships between points(geodesic distance and Voronoi diagrams), emphasizing implicit modeling.
+We also provide two optional papers for you to split reading, which explore differentiable descriptions of intrinsic relationships between points(geodesic distance and Voronoi diagrams)
 
 ---
 
@@ -72,25 +72,39 @@ We also provide two optional papers for you to split reading, which explore diff
    - **Options**: Learn the concept of implicitly describing a system. Pay attention to the smoothing processes applied during topological transitions.
 
 2. **Details to Skip**:
-   - **Options**: Skip most of the equations detailing specific applications (e.g., deformation or dynamics) and focus on the system design.
+   - **Options**: Skip most of the equations detailing specific applications (e.g., deformation or dynamics) and focus on the system modeling.
 
 ---
 
 ## After Reading
 
 1. **Overall Method**:
-   - **Core**: What are the advantages of using a neural network over directly optimizing a simulation? In the inverse design process, why is E required as a variable?
-   - **Options**: Explain how the system ensures differentiability.
+   - **Core paper**: What are the advantages of using a neural network over directly optimizing a simulation? In the inverse design process, why is E required as a variable?
+   - **Option paper**: Explain how the system is modeled to ensure differentiability.
 
 2. **Optimization**:
-   - **Core**: Why is inner optimization necessary, and how is it solved in the paper?
-   - **Options**: (Not required this week) Optimization details in the optional papers will be discussed later.
+   - **Core paper**: Why is inner optimization necessary, and how is it solved?
+   - **Option paper**: (Not required) Try to take some nested problems and derive their derivatives through chain rule.
 
 3. **Discussion**:
    - Reflect on different strategies for handling couplings in a system:
      - Boundary coupling in the Voronoi paper
      - Host-object and elastic-curve coupling in the geodesic paper
-     - Strain conditions in the core paper
+
+4. **Implementation**:
+   - Compare the core paper and its code repository, focusing on the following scripts
+     - [Derivatives.py](https://github.com/liyuesolo/NeuralMetamaterialNetwork/blob/main/Projects/NeuralMetamaterial/python/Derivatives.py)
+     - [Optimization.py](https://github.com/liyuesolo/NeuralMetamaterialNetwork/blob/main/Projects/NeuralMetamaterial/python/Optimization.py)
+     
+     - [OptUniaxialStress.py](https://github.com/liyuesolo/NeuralMetamaterialNetwork/blob/main/Projects/NeuralMetamaterial/python/OptUniaxialStress.py)
+     - [OptStiffness.py](https://github.com/liyuesolo/NeuralMetamaterialNetwork/blob/main/Projects/NeuralMetamaterial/python/OptStiffness.py)
+     - [OptPoissonRatio.py](https://github.com/liyuesolo/NeuralMetamaterialNetwork/blob/main/Projects/NeuralMetamaterial/python/OptPoissonRatio.py)
+ 
+    Understand their correponding parts in the paper. Specifically, you learn
+
+    1.) how to use automatic differentiation in tensorflow to 'watch' the variables to automatically arrive at their derivative
+   
+    2.) how to use scipy.optimize for an optimization model with Jacobian, Hessian and constraints
 
 ---
 
