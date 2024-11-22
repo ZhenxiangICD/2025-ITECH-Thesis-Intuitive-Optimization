@@ -31,7 +31,7 @@ In a neural network, however, the sensitivity matrix *dx(p) / dp* can be easily 
 
 In the core paper we will read this week, the author also uses a neural network to predict the material behavior... There you can see how he COMBINES the knowledge from FEM and NN to achieve the inverse design of a complex system!
 
-I further provide two more optional papers, like last time you can distribute one to each other. They share a very similar research scope, that is to implicitly describe the intrinsic relationship between different points (geodesic distance and voronoi diagram) given a domain in a differentiable manner. 
+I further provide two more optional papers, like last time you can distribute the tasks. They share a very similar research scope, that is to implicitly describe the intrinsic relationship between different points (geodesic distance and voronoi diagram) in a differentiable manner. 
 
 ## Reading Assignments
 
