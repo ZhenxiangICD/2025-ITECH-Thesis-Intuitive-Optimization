@@ -102,7 +102,7 @@ We also provide two optional papers for you to split reading, which explore diff
  
     Understand their correponding parts in the paper. Specifically, you learn
 
-    1.) how to use automatic differentiation in tensorflow to 'watch' the variables to automatically arrive at their derivative
+    1.) how to use automatic differentiation in tensorflow to 'watch' the variables to arrive at their derivative
    
     2.) how to use scipy.optimize for an optimization model with Jacobian, Hessian and constraints
 
