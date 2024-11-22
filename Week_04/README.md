@@ -1,24 +1,23 @@
 # Week 4: Implicit Function Theorem, Sensitivity Analysis - Intro to Inverse Design
 ## Introduction
 
-This session starts a new discussion on inverse design, that is, to discuss a set of problems that optimizes an equilibrium state of some model of optimization/simulation. This kind of optimization is also known as nested/bi-level optimization.
-The key to such a problem lies in computing the derivative of simulation, a.k.a. sensitivity analysis:
+This session introduces the concept of inverse design, a framework for optimizing the equilibrium state of a model under constraints. This type of optimization, often referred to as nested or bi-level optimization, focuses on solving problems where the simulation or optimization outcome depends on input parameters, requiring sensitivity analysis to compute derivatives:
 
 *dx(p) / dp*, 
 
-where *x* is the simulation/optimization outcome from parameter *p*.
+where *x* is the simulation/optimization outcome derived from parameter *p*.
 
-Let's assume 
+Let's assume:
 
 *x(p) = argmin E(x_hat, p)*
 
-meaning *x* is the configuration when some function *E* (i.e. deformation energy) reaches minimal, which depends on a parameter set *p* (i.e. external force, material property) and current configuration *x_hat* (i.e. vertex positions).
+Here, *x* reflects the configuration at which a function *E* (e.g. deformation energy) is minimized, depending on the parameter set *p* (e.g., external forces, material properties) and the current configuration *x_hat* (e.g., vertex positions).
 
-Writing gradient of *E* w.r.t both *p* and *x* as a function *g*, we achieve: 
+Taking the gradient of of *E* w.r.t both *p* and *x* as a function *g*, we define: 
 
 *g(x, p) = 0*
 
-at the minimization point. Then comes the rescue of the implicit function theorem, which you will see in more detail in the tutorial. But essentially it tells you that you can have the following equation
+at the minimization point. Using the **implicit function theorem**, we derive the sensitivity:
 
 *dx(p) / dp = - inv(dg/dx) * dg/dp* (Inverse of the Jacobian *dg/dx* multiply the partial derivative of *g* w.r.t. *p*)
 
@@ -33,67 +32,59 @@ In the core paper we will read this week, the author also uses a neural network 
 
 I further provide two more optional papers, like last time you can distribute the tasks. They share a very similar research scope, that is to implicitly describe the intrinsic relationship between different points (geodesic distance and voronoi diagram) in a differentiable manner. 
 
-## Reading Assignments
+## Before Reading
 
-- **Core - Neural Metamaterial Networks for Nonlinear Material Design**
-  - [Paper](https://arxiv.org/pdf/2309.10600)
-  - [Video](https://www.youtube.com/watch?v=NHLYxoZ2O_s&ab_channel=ComputationalRoboticsLab)
-  - [Code](https://github.com/liyuesolo/NeuralMetamaterialNetwork)
- 
-- **Option A- Differentiable Voronoi Diagrams for Simulation of Cell-Based Mechanical Systems**
-  - [Paper](https://arxiv.org/pdf/2404.18629)
-  - [Short Video](https://www.youtube.com/watch?v=wbBJ4v9VyR0&ab_channel=ComputationalRoboticsLab)
-  - [Code](https://github.com/lnumerow-ethz/VoronoiCellSim)
- 
-- **Option B- Differentiable Geodesic Distance for Intrinsic Minimization on Triangle Meshes**
-  - [Paper](https://arxiv.org/pdf/2404.18610)
-  - [Short Video](https://www.youtube.com/watch?v=R0TByqlbsXQ&ab_channel=ComputationalRoboticsLab)
-  - [Code](https://github.com/liyuesolo/DifferentiableGeodesics)
-    
-## Before Reading 
+1. **Video Tutorials**:
+   - Watch the tutorial on *Implicit Differentiation* to understand when and how derivatives of implicit functions can be computed.
+   - Watch the tutorial on *Adjoint Sensitivities* to learn how adjoint methods simplify solving inverse problems.
 
-- Watch the video tutorial on *Implicit Differentiation* and understand at which condition the derivative of an implicit function can be computed in the abovementioned manner.
+2. **Slides**:
+   - Review the slides on *Sensitivity Analysis* to understand the process of taking derivatives in a simulation.
+   - Quickly glance through *FEM Lightweight Intro* slides to familiarize yourself with concepts like strains and energy density. Refer back to them if you encounter difficulties during reading.
 
-- Read slides of *sensitivity analysis* and review the method of taking derivatives of a simulation process. Then watch the video tutorial on *Adjoint Sensitivities*
-
-- Quickly take a glance through the slides of *FEM lightweight intro* and have the basic concepts of strains and energy density. Go back to them when you have difficulty reading the paper.
-
+---
 
 ## While Reading
-1. **Overall Aims**
-   - *Core*: Understand how the author trains the model with simulation data (map in and map out) and how the model is used together with simulation knowledge for inverse design. The optimization part is crucial as it reveals the key to solving a nested problem with constraints.
-   - *Option*: Try to grab the concept of describing a system implicitly. Understand the smoothing process they take during topological transitions.
 
-2. **Details To Skip**
-   - For the core paper, check on the FEM tutorial back and forth for strain definitions. Pay attention to how the degree of freedom gets simplified with a full FEM system.
-   - For the option paper, skip most of the equations on the application part of the system (i.e. deformation and dynamics) and focus more on the system's design.
-    
+1. **Overall Aims**:
+   - **Core**: Understand how the neural network is trained using simulation data (input-output mappings) and integrated with simulation knowledge for inverse design. Focus on how the optimization process solves nested problems with constraints.
+   - **Options**: Learn the concept of implicitly describing a system. Pay attention to the smoothing processes applied during topological transitions.
+
+2. **Details to Skip**:
+   - **Options**: Skip most of the equations detailing specific applications (e.g., deformation or dynamics) and focus on the system design.
+
+---
+
 ## After Reading
 
-1. **Overall Method**
-   - For the core paper, what are the advantages of using a neural network instead of directly optimizing over a simulation? What are the inputs used to train the network and why are they used?
-   - For the option papers, explain how the system is differentiable.
-     
-2. **Optimization**
-   - For the core paper, why is the inner optimization necessary? How is it solved?
-   - Optimization part in the option papers is not required at this time...
-  
-3. **Discussion**
-   - Reflect on the different strategy of handing couplings in a system. (Boundary Coupling in the voronoi paper, hosting object - elastic curve coupling in the geodesic paper, and the strain condition for the core paper)
+1. **Overall Method**:
+   - **Core**: What are the advantages of using a neural network over directly optimizing a simulation? In the inverse design process, why is E required as a variable?
+   - **Options**: Explain how the system ensures differentiability.
+
+2. **Optimization**:
+   - **Core**: Why is inner optimization necessary, and how is it solved in the paper?
+   - **Options**: (Not required this week) Optimization details in the optional papers will be discussed later.
+
+3. **Discussion**:
+   - Reflect on different strategies for handling couplings in a system:
+     - Boundary coupling in the Voronoi paper
+     - Host-object and elastic-curve coupling in the geodesic paper
+     - Strain conditions in the core paper
+
+---
 
 ## Additional Resources
 
-- **Tutorials**
-  - [Implicit Differentiation](https://www.3blue1brown.com/lessons/implicit-differentiation)
-  - [Adjoint Sensitivities](https://www.youtube.com/watch?v=MlHKW7Ja-qs&ab_channel=MachineLearning%26Simulation)
-    
-- **Course and Notes**
-  - [Sensitivity Analysis](https://crl.ethz.ch/teaching/computational-fab-19/slides/sensitivityAnalysis.pdf)
-  - [FEM lightweight intro](https://www.cs.cmu.edu/~scoros/cs15869-s15/lectures/08-FEM.pdf)
+### Tutorials:
+- [Implicit Differentiation](https://www.3blue1brown.com/lessons/implicit-differentiation)
+- [Adjoint Sensitivities](https://www.youtube.com/watch?v=MlHKW7Ja-qs&ab_channel=MachineLearning%26Simulation)
 
-- **Code Repository**
-  - [Wukong / collection of many classic differentiable simulation problems)](https://github.com/liyuesolo/Wukong2024/tree/master)
- 
-- **Lecture (only watch when you have spare time...)**
-  - [Differentiable Simulation](https://www.youtube.com/watch?v=atCFu-vwyVw&t=1261s&ab_channel=%E6%9C%B1%E5%AD%90%E5%8E%9A)  
+### Course and Notes:
+- [Sensitivity Analysis](https://crl.ethz.ch/teaching/computational-fab-19/slides/sensitivityAnalysis.pdf)
+- [FEM Lightweight Intro](https://www.cs.cmu.edu/~scoros/cs15869-s15/lectures/08-FEM.pdf)
 
+### Code Repository:
+- [Wukong: Collection of Differentiable Simulation Problems](https://github.com/liyuesolo/Wukong2024/tree/master)
+
+### Lecture (Optional):
+- [Differentiable Simulation](https://www.youtube.com/watch?v=atCFu-vwyVw&t=1261s&ab_channel=%E6%9C%B1%E5%AD%90%E5%8E%9A)
