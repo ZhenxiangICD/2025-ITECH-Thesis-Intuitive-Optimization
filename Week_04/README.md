@@ -108,6 +108,12 @@ We also provide two optional papers for you to split reading, which explore diff
    
     2.) how to use scipy.optimize for an optimization model with Jacobian, Hessian and constraints
 
+   EXTRA: I've added comments to some of the codes to [Annotated_code](https://github.com/ZhenxiangICD/2025-ITECH-Thesis-Intuitive-Optimization/edit/main/Week_04/Annotated_code) for you to better understand what each step is doing. Please pay specific detail to
+   
+   - *Line 412-446* from Optimization.py to understand the computation of sensitivity analysis
+   - *Line 448-496* from OptPoissonRatio.py to understand the global process of an optimization-based optimization 
+
+
 ---
 
 ## Additional Resources
