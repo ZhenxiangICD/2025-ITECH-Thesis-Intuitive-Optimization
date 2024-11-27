@@ -61,35 +61,37 @@ We also provide two optional papers for you to split reading, which explore diff
 
 2. **Slides**:
    - Review the slides on *Sensitivity Analysis* to understand the process of taking derivatives in a simulation.
-   - Quickly glance through *FEM Lightweight Intro* slides to familiarize yourself with concepts like strains and energy density. Refer back to them if you encounter difficulties during reading.
+   - Quickly glance through *FEM Lightweight Intro* slides to familiarize yourself with concepts like strains and energy density. Understand the difference between Cauchy and Green strain. Refer back to them if you encounter difficulties during reading.
 
 ---
 
 ## While Reading
 
 1. **Overall Aims**:
-   - **Core**: Understand how the neural network is trained using simulation data (input-output mappings) and integrated with simulation knowledge for inverse design. Focus on how the optimization process solves nested problems with constraints.
-   - **Options**: Learn the concept of implicitly describing a system. Pay attention to the smoothing processes applied during topological transitions.
+   - **Core paper**: Understand how the neural network model integrated with simulation knowledge for inverse design. Focus on how the optimization process solves nested problems and where the derivatives come from.
+   - **Option papers**: Learn the concept of implicitly describing a system with a governing condition. 
 
 2. **Details to Skip**:
-   - **Options**: Skip most of the equations detailing specific applications (e.g., deformation or dynamics) and focus on the system modeling.
+   - **Option papers**: Skip most of the equations detailing specific applications (e.g., deformation or dynamics) and focus on the system modeling.
 
 ---
 
 ## After Reading
 
 1. **Overall Method**:
-   - **Core paper**: What are the advantages of using a neural network over directly optimizing a simulation? In the inverse design process, why is E required as a variable?
-   - **Option paper**: Explain how the system is modeled to ensure differentiability.
-
+   - **Core paper**:
+     - What are the advantages of using a neural network over directly optimizing a native-scale simulation?
+     - Understand the simulation process to generate data, and how deformation gradient, Cauchy/Green strain and energy dentisy are defined.
+   - **Option papers**: Explain the degree of freedom in the implicit system and how they are differentiable.
+     
 2. **Optimization**:
-   - **Core paper**: Why is inner optimization necessary, and how is it solved?
-   - **Option paper**: (Not required) Try to take some nested problems and derive their derivatives through chain rule.
+   - **Core paper**:
+     - What is the inner optimization actually defiend? How is it solved and to what derivatives are required? 
+     - How are the analytical derivatives of the neural networks applied to the optimization model?
+   - **All papers**: Try to take one of the nested problems and derive their derivatives and (optionally) hessian through chain rule.
 
 3. **Discussion**:
-   - Reflect on different strategies for handling couplings in a system:
-     - Boundary coupling in the Voronoi paper
-     - Host-object and elastic-curve coupling in the geodesic paper
+   - Reflect on high-level strategy of optimzing a mesh-based simulation with mesh-free representation.
 
 4. **Implementation**:
    - Compare the core paper and its code repository, focusing on the following scripts
@@ -102,9 +104,15 @@ We also provide two optional papers for you to split reading, which explore diff
  
     Understand their correponding parts in the paper. Specifically, you learn
 
-    1.) how to use automatic differentiation in tensorflow to 'watch' the variables to automatically arrive at their derivative
+    1.) how to use automatic differentiation in tensorflow to 'watch' the variables to arrive at their derivative
    
     2.) how to use scipy.optimize for an optimization model with Jacobian, Hessian and constraints
+
+   EXTRA: I've added comments to some of the codes to [Annotated_code](https://github.com/ZhenxiangICD/2025-ITECH-Thesis-Intuitive-Optimization/edit/main/Week_04/Annotated_code) for you to better understand what each step is doing. Please pay specific detail to
+   
+   - *Line 412-446* from Optimization.py to understand the computation of sensitivity analysis
+   - *Line 448-496* from OptPoissonRatio.py to understand the global process of an optimization-based optimization 
+
 
 ---
 
@@ -119,7 +127,7 @@ We also provide two optional papers for you to split reading, which explore diff
 - [FEM Lightweight Intro](https://www.cs.cmu.edu/~scoros/cs15869-s15/lectures/08-FEM.pdf)
 
 ### Code Repository:
-- [Wukong: Collection of Differentiable Simulation Problems](https://github.com/liyuesolo/Wukong2024/tree/master)
+- [Wukong: Collection of Differentiable Simulation Projects](https://github.com/liyuesolo/Wukong2024/tree/master)
 
 ### Lecture (Optional):
 - [Differentiable Simulation](https://www.youtube.com/watch?v=atCFu-vwyVw&t=1261s&ab_channel=%E6%9C%B1%E5%AD%90%E5%8E%9A)
