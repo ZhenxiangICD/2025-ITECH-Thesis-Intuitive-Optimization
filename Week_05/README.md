@@ -55,7 +55,7 @@ Review these questions before watching the tutorials and reading the papers. Ans
    - Explain different boundary condition scenarios.
 
 #### **Spectral Analysis**:
-   - Try *Robust Laplacian* from the provided code repository. Input a list of points from Rhino/Grasshopper (I provided a function to convert a point list to .ply format), which could be as sparse as column grids, or as dense as FEM points across the entire slab domain, use the provided code to test what different scalar outputs corresponding to different eigenvectors look like and summarize what you have observed.
+   - Try *Robust Laplacian* from the provided code repository. Input a list of points from Rhino/Grasshopper (I offered a [function](https://github.com/ZhenxiangICD/2025-ITECH-Thesis-Intuitive-Optimization/blob/main/Week_05/rh_pts_to_ply.py) to convert a point list to .ply format), which could be as sparse as column grids, or as dense as FEM points across the entire slab domain, use the code to test what different scalar outputs corresponding to different eigenvectors look like and summarize what you have observed.
    - What shape features are described by using higher/lower eigenvalues?
    - How does solving a Poisson equation potentially lead to solving an eigenvalue problem?  
 
