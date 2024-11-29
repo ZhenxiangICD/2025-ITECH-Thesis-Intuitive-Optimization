@@ -100,3 +100,6 @@ Review these questions before watching the tutorials and reading the papers. Ans
 ### Geometry Tutorials:
 - [The Laplace Operator](https://youtu.be/oEq9ROl9Umk?si=XN7urauKAiuPbMlM)
 - [PDE and Spectral Approaches to Geometry Processing](https://www.youtube.com/watch?v=BTZKa0wTfaQ&ab_channel=JustinSolomon)
+
+### Code Repository
+- [Robust Laplacian](https://github.com/nmwsharp/robust-laplacians-py)
