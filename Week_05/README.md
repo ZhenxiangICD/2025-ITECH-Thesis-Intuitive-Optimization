@@ -55,9 +55,9 @@ Review these questions before watching the tutorials and reading the papers. Ans
    - Explain different boundary condition scenarios.
 
 #### **Spectral Analysis**:
-   - What are shape descriptors, and why can eigenfunctions be used to create them?  
+   - Try *Robust Laplacian* from the provided code repository. Input a list of points from Rhino/Grasshopper (I provided a function to convert a point list to .ply format), which could be as sparse as column grids, or as dense as FEM points across the entire slab domain, use the provided code to test what different scalar outputs corresponding to different eigenvectors look like and summarize what you have observed.
+   - What shape features are described by using higher/lower eigenvalues?
    - How does solving a Poisson equation potentially lead to solving an eigenvalue problem?  
-   - What does it mean to describe a shape by using higher eigenvalues?
 
 #### **Differential Coordinates**:
    - What are the advantages of using differential coordinates?  
@@ -84,7 +84,8 @@ Review these questions before watching the tutorials and reading the papers. Ans
 
 ### 3. **Discussion**
 
-   - Think of an inverse deformation problem: if the shape remains unchanged, what criteria would you design to guide users in moving the handle points so that those handles can produce better or similar global control over the shape?  
+   - Think of an inverse deformation problem: if the shape remains unchanged, what criteria would you design to guide users in moving the handle points so that those handles can produce better or similar global control over the shape?
+   - Think of heat equation in the context of column-slab. What could the outcome scalar field mean if we assign a value at each column point as the initial boundary condition and solve a heat equation? What if we set a 
    - Select examples listed in the sections related to FEM simulation-aware shape editing and save them for future reference.
 
 
