@@ -85,7 +85,7 @@ Review these questions before watching the tutorials and reading the papers. Ans
 ### 3. **Discussion**
 
    - Think of an inverse deformation problem: if the shape remains unchanged, what criteria would you design to guide users in moving the handle points so that those handles can produce better or similar global control over the shape?
-   - Think of heat equation in the context of column-slab. What could the outcome scalar field mean if we assign a value at each column point as the initial boundary condition and solve a heat equation? What if we set a 
+   - Think of heat equation in the context of column-slab. What could the outcome scalar field mean if we assign a value at each column point as the initial boundary condition and solve a heat equation? What if we also set fixed values/vectors at slab edges as boundary conditions? 
    - Select examples listed in the sections related to FEM simulation-aware shape editing and save them for future reference.
 
 
