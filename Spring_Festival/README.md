@@ -98,6 +98,8 @@ You will:
   - Paper 1: A broad, adjoint-based PDE solver that handles force, shape, material differentiation. Good for systematic shape or parameter optimization with guaranteed robustness.
   - Paper 2: Shows how to build and use a surrogate from huge simulation data, giving near-instant design feedback for a real engineering scenario.
   Compare these strategies—direct adjoint vs. neural surrogate—for your own thesis tasks.
-Feel free to skip detailed derivations that do not apply to your own problem.
-Instead, focus on how each paper formulates the problem, handles constraints, structures the optimization, and validates the results.
-These are key takeaways for applying similar methods in your own thesis work. Happy reading! 新年快乐!
+
+  Feel free to skip detailed derivations that do not apply to your own problem.
+  Instead, focus on how each paper formulates the problem, handles constraints, structures the optimization, and validates the results.These are key takeaways for applying similar methods in your own thesis work. 
+  
+  Happy reading! 新年快乐!
