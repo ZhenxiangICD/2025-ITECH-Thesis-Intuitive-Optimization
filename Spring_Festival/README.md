@@ -91,7 +91,7 @@ You will:
   - Section 5, optimization framework, and the motivation of why a neural network will be needed.
   - Section 6, important section about how the model is chosen and trained to predict multiple outputs, and how the dataset is constructed
   - Section 7, practical interactive design tool which uses the neural network. interested to see how they use optimization to 'guide' design
-  - Section 8, result section. you can take reference on the scale of their dataset and how they evaluate the prediction model.
+  - Section 8, result section as you can take reference on the scale of their dataset and how they evaluate the prediction model.
 
 ### Closing Notes ###
 
